@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@model List<WebApplication1_15_7.Models.SanPham>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Tên</th>
+            <th>Giá</th>
+            <th>Mô tả</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null && Model.Count > 0)
+        {
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Ten</td>
+                    <td>@item.Gia</td>
+                    <td>@item.MoTa</td>
+                </tr>
+            }
+        }
+    <td><a href="#">Thêm</a></td>
+    <td><a href="#">Sửa</a></td>
+    <td><a href="#">Xóa</a></td>
+    </tbody>
+</table>
